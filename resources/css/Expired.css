@@ -1,0 +1,109 @@
+/* استایل برای صفحه expired فقط */
+.expired-page {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #f3f4f6;
+}
+
+/* استایل برای بخش کامل صفحه */
+.expired-page .min-h-screen {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #6EE7B7, #3B82F6);
+}
+
+/* استایل برای جعبه محتوا */
+.expired-page .bg-white {
+    background-color: white;
+    border-radius: 15px;
+    padding: 30px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    width: 100%;
+    text-align: center;
+}
+
+/* لوگو */
+.expired-page .flex img {
+    height: 80px;
+    margin-bottom: 20px;
+}
+
+/* عنوان صفحه */
+.expired-page h1 {
+    font-size: 36px;
+    font-weight: 700;
+    color: #2D6A4F;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+/* متن پیام */
+.expired-page p {
+    font-size: 18px;
+    color: #4B5563;
+    margin-bottom: 30px;
+}
+
+/* بخش تماس */
+.expired-page .space-y-6 {
+    margin-bottom: 30px;
+}
+
+.expired-page .text-lg {
+    font-size: 16px;
+    color: #1F2937;
+}
+
+/* لینک‌ها */
+.expired-page a {
+    text-decoration: none;
+    display: block;
+    background-color: #34D399;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 10px;
+    margin: 10px 0;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.expired-page a:hover {
+    background-color: #059669;
+    transform: translateY(-2px);
+}
+
+/* شماره‌های تماس */
+.expired-page .text-gray-100 {
+    color: #D1D5DB;
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+/* پیام موفقیت */
+.expired-page .text-green-700 {
+    font-size: 20px;
+    font-weight: 600;
+    color: #2D6A4F;
+    margin-top: 20px;
+}
+
+/* دکمه خروج */
+.expired-page button {
+    background-color: #10B981;
+    color: white;
+    font-size: 18px;
+    padding: 12px;
+    width: 100%;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.expired-page button:hover {
+    background-color: #059669;
+    transform: translateY(-2px);
+}

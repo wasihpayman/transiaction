@@ -1,0 +1,170 @@
+/* استایل‌های پایه */
+.container {
+    font-family: 'Vazir', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    direction: rtl;
+  }
+  
+  /* پس‌زمینه گرادینت */
+  .bg-gradient-custom {
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  }
+  
+  /* استایل کارت اصلی */
+  .card {
+    backdrop-filter: blur(10px);
+    background-color: rgba(255, 255, 255, 0.85);
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+  }
+  
+  .card:hover {
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+  }
+  
+  /* استایل هدر */
+  .header {
+    background: linear-gradient(90deg, #4b6cb7 0%, #182848 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* فیلد جستجو */
+  .search-input {
+    width: 100%;
+    padding: 12px 20px;
+    border: 2px solid #e2e8f0;
+    border-radius: 10px;
+    font-size: 16px;
+    transition: all 0.3s;
+    background-color: rgba(255, 255, 255, 0.8);
+  }
+  
+  .search-input:focus {
+    outline: none;
+    border-color: #4b6cb7;
+    box-shadow: 0 0 0 3px rgba(75, 108, 183, 0.2);
+  }
+  
+  /* استایل جدول */
+  .table-container {
+    width: 100%;
+    overflow-x: auto;
+  }
+  
+  .table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0 10px;
+    margin-top: 20px;
+  }
+  
+  .table th {
+    background-color: #4b6cb7;
+    color: white;
+    padding: 15px;
+    text-align: right;
+    font-weight: 600;
+    position: sticky;
+    top: 0;
+  }
+  
+  .table td {
+    padding: 15px;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-bottom: 1px solid #e2e8f0;
+  }
+  
+  .table tr:hover td {
+    background-color: rgba(235, 241, 255, 0.9);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+  }
+  
+  /* دکمه تمدید */
+  .extend-btn {
+    background: linear-gradient(90deg, #4b6cb7 0%, #182848 100%);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .extend-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 7px 14px rgba(0, 0, 0, 0.15);
+    background: linear-gradient(90deg, #182848 0%, #4b6cb7 100%);
+  }
+  
+  .extend-btn:disabled {
+    background: #cbd5e0;
+    cursor: not-allowed;
+    transform: none;
+    box-shadow: none;
+  }
+  
+  /* تنظیمات ریسپانسیو */
+  @media (max-width: 768px) {
+    .table th, .table td {
+      padding: 10px 5px;
+      font-size: 14px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    
+    .card {
+      padding: 15px;
+    }
+    
+    .header {
+      font-size: 24px;
+    }
+  }
+  
+  /* انیمیشن برای حالت لودینگ */
+  @keyframes pulse {
+    0% { opacity: 0.6; }
+    50% { opacity: 1; }
+    100% { opacity: 0.6; }
+  }
+  
+  .loading {
+    animation: pulse 1.5s infinite;
+  }
+  
+  /* استایل حالت خالی */
+  .empty-state {
+    color: #718096;
+    text-align: center;
+    padding: 40px 0;
+    font-size: 18px;
+  }
+  
+  .empty-state-icon {
+    font-size: 50px;
+    margin-bottom: 20px;
+    color: #cbd5e0;
+  }
+  
+  /* تنظیمات نوتیفیکیشن‌ها */
+  .Toastify__toast {
+    border-radius: 8px !important;
+    font-family: 'Vazir', sans-serif !important;
+    direction: rtl !important;
+  }
+  
+  .Toastify__toast--success {
+    background: linear-gradient(90deg, #38a169 0%, #2f855a 100%) !important;
+  }
+  
+  .Toastify__toast--error {
+    background: linear-gradient(90deg, #e53e3e 0%, #c53030 100%) !important;
+  }

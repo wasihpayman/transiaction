@@ -1,0 +1,92 @@
+/* اضافه کردن فونت Poppins */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap');
+
+/* استایل برای عنوان Money Tree */
+.money-tree-title {
+    font-family: 'Poppins', sans-serif;
+    font-size: 32px;
+    font-weight: 600;
+    color: #28a745;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+    letter-spacing: 1px;
+}
+
+/* استایل فرم لاگین */
+.login-form {
+    position: relative;
+    z-index: 2;
+}
+
+/* استایل برای درخت */
+.tree {
+    position: absolute;
+    bottom: -100px;
+    left: 50%;
+    width: 50px;
+    height: 50px;
+    background-color: #2d7d2f;
+    border-radius: 50%;
+    transform: translateX(-50%);
+    transition: all 5s ease-in-out;  /* انیمیشن رشد */
+    visibility: hidden;  /* پنهان کردن درخت به‌طور پیش‌فرض */
+}
+
+.tree.active {
+    visibility: visible;  /* درخت زمانی که فعال شد، نمایان می‌شود */
+    height: 200px;  /* افزایش ارتفاع درخت */
+    width: 100px;  /* افزایش عرض درخت */
+}
+
+.tree:before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 10px;
+    height: 40px;
+    background-color: #3b9e3b;
+    transform: translateX(-50%);
+}
+
+.tree.active:before {
+    animation: growTree 5s ease-in-out infinite;  /* انیمیشن رشد */
+}
+
+@keyframes growTree {
+    0% {
+        height: 40px;
+        width: 10px;
+    }
+    50% {
+        height: 60px;
+        width: 15px;
+    }
+    100% {
+        height: 100px;
+        width: 20px;
+    }
+}
+
+/* شاخه‌های پول */
+.tree.active .branch {
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    width: 30px;
+    height: 30px;
+    background-color: gold;
+    border-radius: 50%;
+    animation: dropMoney 5s ease-in-out infinite;
+}
+
+@keyframes dropMoney {
+    0% {
+        transform: translateX(-50%) translateY(0);
+    }
+    50% {
+        transform: translateX(-50%) translateY(50px);
+    }
+    100% {
+        transform: translateX(-50%) translateY(100px);
+    }
+}
