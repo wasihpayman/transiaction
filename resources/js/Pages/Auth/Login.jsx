@@ -26,7 +26,7 @@ export default function Login(props) {
                         <div className="form-group mb-2">
                             <label htmlFor="email">Email</label>
                             <input
-                                type="text"
+                                type="email"
                                 className="form-control"
                                 placeholder="Enter Email"
                                 value={data.email}
